@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    
+    <link rel="stylesheet" href="slider.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/531c760f61.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container">
+        <!--Bagian Navigasi-->
+        <nav class="navbar">
+            <div class="logo">
+                <h3 class="nama">Fashion <span class="spn-nama">Shop</span></h3>
+            </div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#promo">Promo</a></li>
+                <li><a href="#baju">Baju</a></li>
+                <li><a href="#celana">Celana</a></li>
+                <li><a href="#sepatu">Sepatu</a></li>
+                <li onclick="hideMenu()" class="close-btn">x</li>
+            </ul>
+            <div class="search-box">
+                <input type="search" name="" id="find" placeholder="cari apa hayo.." onkeyup="search()" />
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a> 
+            <div onclick="showMenu()" class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+             
+        
+        
+        </nav>
+
+
+    <section class="product" id="promo">
+        <div class="product-category">
+        <h2 >Produk Promo</h2>
+        <i class="fa-solid fa-percent"></i>
+    </div>
+        <button class="pre-btn"><img src="assets/simbol/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="assets/simbol/arrow.png" alt=""></button>
+        <div class="product-container">
+            
+            <div class="product-card" data-name="p-1">
+                <div class="product-image">
+                    <span class="discount-tag">Diskon 50%</span>
+                    <img src="assets/celana cargo.jpeg" class="product-thumb" alt="">
+                    <button class="card-btn">Lihat Detail Produk</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Celana Cargo</h2>
+                    <p class="product-short-description">Celana Cargo Keren dan nyaman</p>
+                    <span class="price">Rp.120.000</span><span class="actual-price">Rp.200.000</span>
+                </div>
+            </div>
+
+
+            <div class="product-card" data-name="p-2">
+                <div class="product-image">
+                    <span class="discount-tag">Diskon 40%</span>
+                    <img src="assets/gambar baju couple anak.jpeg" class="product-thumb" alt="">
+                    <button class="card-btn">Tampilkan Detail Produk</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Setelan Anak</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">Rp.90.000</span><span class="actual-price">Rp.180.000</span>
+                </div>
+            </div>
+
+
+            <div class="product-card" data-name="p-3">
+                <div class="product-image">
+                    <span class="discount-tag">Diskon 55%</span>
+                    <img src="assets/gambar sepatu sneakers.jpeg" class="product-thumb" alt="">
+                    <button class="card-btn">Tampilkan Detail Produk</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Sepatu Sneakers</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">Rp.130.000</span><span class="actual-price">Rp.350.000</span>
+                </div>
+            </div>
+
+
+            <div class="product-card" data-name="p-4">
+                <div class="product-image">
+                    <span class="discount-tag">Diskon 20%</span>
+                    <img src="assets/gambar cutbray.jpeg" class="product-thumb" alt="">
+                    <button class="card-btn">Tampilkan Detail Produk</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Celana Cutbray</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">Rp.180.000</span><span class="actual-price">Rp.200.000</span>
+                </div>
+            </div>
+
+
+            <div class="product-card" data-name="p-5">
+                <div class="product-image">
+                    <span class="discount-tag">Diskon 30% </span>
+                    <img src="assets/gambar pajamas.jpeg" class="product-thumb" alt="">
+                    <button class="card-btn">Tampilkan Detail Produk</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Baju pajamas</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">Rp.80.000</span><span class="actual-price">Rp.120.000</span>
+                </div>
+            </div>
+
+
+
+            <div class="product-card" data-name="p-6">
+                <div class="product-image">
+                    <span class="discount-tag">Diskon 25% </span>
+                    <img src="assets/gambar sepatu anak laki-laki.jpeg" class="product-thumb" alt="">
+                    <button class="card-btn">Tampilkan Detail Produk</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Sepatu anak</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">Rp.125.000</span><span class="actual-price">Rp.150.000</span>
+                </div>
+            </div>
+
+
+            <div class="product-card" data-name="p-7">
+                <div class="product-image">
+                    <span class="discount-tag">Diskon 20% </span>
+                    <img src="assets/gambar baju.jpeg" class="product-thumb" alt="">
+                    <button class="card-btn">Tampilkan Detail Produk</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Dres wanita kekinian</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">Rp.140.000</span><span class="actual-price">Rp.180.000</span>
+                </div>
+            </div>
+
+
+
+            <div class="product-card" data-name="p-8">
+                <div class="product-image">
+                    <span class="discount-tag">Diskon 10%</span>
+                    <img src="assets/gambar celana panjang anak-anak.jpeg" class="product-thumb" alt="">
+                    <button class="card-btn">Tampilkan Detail Produk</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Celana anak-anak</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">Rp.90.000</span><span class="actual-price">Rp.100.000</span>
+                </div>
+            </div>
+
+
+            <div class="product-card" data-name="p-9">
+                <div class="product-image">
+                    <span class="discount-tag">Diskon 25% </span>
+                    <img src="assets/gamar sweater wanita korea.jpeg" class="product-thumb" alt="">
+                    <button class="card-btn">Tampilkan Detail Produk</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">sweater wanita korea</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">Rp.120.000</span><span class="actual-price">Rp.185.000</span>
+                </div>
+            </div>
+
+
+            <div class="product-card" data-name="p-10">
+                <div class="product-image">
+                    <span class="discount-tag">Diskon 15%</span>
+                    <img src="assets/gambar sepatu nike.jpeg" class="product-thumb" alt="">
+                    <button class="card-btn">Tampilkan Detail Produk</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Sepatu Olahraga</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">Rp.265.000</span><span class="actual-price">Rp.380.000</span>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+<!--BAJU-->
+<br id="baju"> <br> 
+    <div class="product-category">
+        <h2 >Baju </h2>
+        <i class="fa-solid fa-shirt"></i>
+    </div>
+<section class="product-baju" >
+    
+
+    <div class="card-baju" data-name="p-11">
+    <img src="assets/baju/KaosPolosHitam.jpeg"/>
+    <div class="card-content">
+    <h2 class="product-brand">Kaos Hitam Polos</h2>
+    <h3 class="harga">Rp. 70.000</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span>( 250 )</span>
+    </div>
+    </div>
+    </div>
+
+
+    <div class="card-baju" data-name="p-12">
+        <img src="assets/baju/belangwanita.jpg"/>
+        <div class="card-content">
+        <h2 class="product-brand">Kaos Wanita Belang</h2>
+        <h3 class="harga">Rp. 90.000</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 340 )</span>
+        </div>
+        </div>
+        </div>
+
+
+        <div class="card-baju" data-name="p-13">
+            <img src="assets/baju/kaosVintage.jpeg"/>
+            <div class="card-content">
+            <h2 class="product-brand">Kaos Vintage Pria</h2>
+            <h3 class="harga">Rp. 120.000</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 140 )</span>
+            </div>
+            </div>
+            </div>
+
+
+            <div class="card-baju"data-name="p-14">
+                <img src="assets/baju/kaosdistrooversize.jpg"/>
+                <div class="card-content">
+                <h2 class="product-brand">Kaos Distro Oversize</h2>
+                <h3 class="harga">Rp. 100.000</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>( 540 )</span>
+                </div>
+                </div>
+                </div>
+
+
+
+                <div class="card-baju" data-name="p-15">
+                    <img src="assets/baju/kemejawanita.jpg"/>
+                    <div class="card-content">
+                    <h2 class="product-brand">Kemeja Polos Wanita</h2>
+                    <h3 class="harga">Rp. 130.000</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>( 230 )</span>
+                    </div>
+                    </div>
+                    </div>
+
+    
+
+</section>
+
+<!--CELANA-->
+<br id="celana"> <br>
+<div class="product-category">
+    <h2 >Celana </h2>
+    <i class="fa-solid fa-socks"></i>
+</div>
+<section class="product-celana" >
+
+    <div class="card-celana" data-name="p-16">
+    <img src="assets/celana/cargo_pria.webp"/>
+    <div class="card-content">
+    <h2 class="product-brand">Celana Cargo Elegan</h2>
+    <h3 class="harga">Rp. 140.000</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span>( 250 )</span>
+    </div>
+    </div>
+    </div>
+
+
+    <div class="card-celana" data-name="p-17">
+        <img src="assets/celana/jeans-wanita.jpg"/>
+        <div class="card-content">
+        <h2 class="product-brand">Jeans Wanita Asthetic</h2>
+        <h3 class="harga">Rp. 120.000</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 340 )</span>
+        </div>
+        </div>
+        </div>
+
+
+        <div class="card-celana" data-name="p-18">
+            <img src="assets/celana/kolor.jpg"/>
+            <div class="card-content">
+            <h2 class="product-brand">Celana Pendek Olahraga</h2>
+            <h3 class="harga">Rp. 120.000</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 140 )</span>
+            </div>
+            </div>
+            </div>
+
+
+            <div class="card-celana" data-name="p-19">
+                <img src="assets/celana/kulotwanita.webp"/>
+                <div class="card-content">
+                <h2 class="product-brand">Kulot Wanita Elegan</h2>
+                <h3 class="harga">Rp. 100.000</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>( 540 )</span>
+                </div>
+                </div>
+                </div>
+
+
+
+                <div class="card-celana" data-name="p-20">
+                    <img src="assets/celana/trainingHitam.jpg"/>
+                    <div class="card-content">
+                    <h2 class="product-brand">Training Jogging Santai</h2>
+                    <h3 class="harga">Rp. 130.000</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>( 230 )</span>
+                    </div>
+                    </div>
+                    </div>
+
+
+                
+
+            </section>
+
+
+    <!--Sepatu -->
+    <br id="sepatu"> <br>
+    <div class="product-category">
+        <h2 >Sepatu </h2>
+        <i class="fa-solid fa-socks"></i>
+    </div>
+    <section class="product-sepatu" >
+    
+        <div class="card-sepatu" data-name="p-21">
+        <img src="assets/sepatu/SneakersWanita.jpg"/>
+        <div class="card-content">
+        <h2 class="product-brand">Sneakers Wanita</h2>
+        <h3 class="harga">Rp. 250.000</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 130 )</span>
+        </div>
+        </div>
+        </div>
+    
+    
+        <div class="card-sepatu" data-name="p-22">
+            <img src="assets/sepatu/SepatuFutsal.webp"/>
+            <div class="card-content">
+            <h2 class="product-brand">Sepatu Futsal</h2>
+            <h3 class="harga">Rp. 300.000</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 340 )</span>
+            </div>
+            </div>
+            </div>
+    
+    
+            <div class="card-sepatu" data-name="p-23">
+                <img src="assets/sepatu/converse.jpg"/>
+                <div class="card-content">
+                <h2 class="product-brand">Sepatu Converse</h2>
+                <h3 class="harga">Rp. 150.000</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>( 140 )</span>
+                </div>
+                </div>
+                </div>
+    
+    
+                <div class="card-sepatu" data-name="p-24">
+                    <img src="assets/sepatu/jordan.jpg"/>
+                    <div class="card-content">
+                    <h2 class="product-brand">Sepatu Jordan</h2>
+                    <h3 class="harga">Rp. 400.000</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>( 540 )</span>
+                    </div>
+                    </div>
+                    </div>
+    
+    
+    
+                    <div class="card-sepatu" data-name="p-25">
+                        <img src="assets/sepatu/sekolah.jpg"/>
+                        <div class="card-content">
+                        <h2 class="product-brand">Sepatu Sekolah</h2>
+                        <h3 class="harga">Rp. 110.000</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>( 430 )</span>
+                        </div>
+                        </div>
+                    </div>
+
+        
+                </section>
+
+
+<!--Pop Up Product-->
+
+
+                <div class="products-preview">
+
+                    <div class="preview" data-target="p-1">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/celana cargo.jpeg" alt="">
+                        <h3>Celana Cargo </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Celana Cargo Wanita berbagai warna dan size</p>
+                        <div class="price">Rp. 120.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+
+
+                    </div>
+
+
+
+
+                    <div class="preview" data-target="p-2">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/gambar baju couple anak.jpeg" alt="">
+                        <h3>Setelan Anak </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.90.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+
+
+                    </div>
+
+
+                    <div class="preview" data-target="p-3">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/gambar sepatu sneakers.jpeg" alt="">
+                        <h3>Sepatu Sneakers </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.130.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+
+                    <div class="preview" data-target="p-4">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/gambar cutbray.jpeg" alt="">
+                        <h3>Celana Cutbray </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.180.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+
+
+                    </div>
+
+
+
+                    <div class="preview" data-target="p-5">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/gambar pajamas.jpeg" alt="">
+                        <h3>Baju Pajamas</h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.80.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+                    <div class="preview" data-target="p-6">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/gambar sepatu anak laki-laki.jpeg" alt="">
+                        <h3>Sepatu Anak Laki-laki </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.125.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+
+                    <div class="preview" data-target="p-7">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/gambar baju.jpeg" alt="">
+                        <h3>Dres wanita Kekinian </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.140.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+                    <div class="preview" data-target="p-8">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/gambar celana panjang anak-anak.jpeg" alt="">
+                        <h3>Celana Anak-anak </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.90.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+                    <div class="preview" data-target="p-9">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/gamar sweater wanita korea.jpeg" alt="">
+                        <h3>Sweater Wanita Kekinian </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.120.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+                    <div class="preview" data-target="p-10">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/gambar sepatu nike.jpeg" alt="">
+                        <h3>Sepatu Olahraga</h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.265.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+                    <div class="preview" data-target="p-11">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/baju/KaosPolosHitam.jpeg" alt="">
+                        <h3>Kaos Hitam Polos </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.70.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+                    <div class="preview" data-target="p-12">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/baju/belangwanita.jpg" alt="">
+                        <h3>Kaos Wanita Belang </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.90.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+                    <div class="preview" data-target="p-13">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/baju/kaosVintage.jpeg" alt="">
+                        <h3>Celana Cargo </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.120.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+                    <div class="preview" data-target="p-14">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/baju/kaosdistrooversize.jpg" alt="">
+                        <h3>Kaos Distro Oversize </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.100.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+                    <div class="preview" data-target="p-15">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/baju/kemejawanita.jpg" alt="">
+                        <h3>Kemeja Polos Wanita </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.130.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+                    <div class="preview" data-target="p-16">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/celana/cargo_pria.webp" alt="">
+                        <h3>Celana Cargo Elegan </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.140.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+
+                    <div class="preview" data-target="p-17">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/celana/jeans-wanita.jpg" alt="">
+                        <h3>Jeans Wanita Asthetic</h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.120.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+
+                    <div class="preview" data-target="p-18">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/celana/kolor.jpg" alt="">
+                        <h3>Celna Pendek Olahraga </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">120.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+                    <div class="preview" data-target="p-19">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/celana/kulotwanita.webp" alt="">
+                        <h3>Kilot Wanita Elegan </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">100.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+                    <div class="preview" data-target="p-20">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/celana/trainingHitam.jpg" alt="">
+                        <h3>Training Jogging Santai </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.130.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+                    <div class="preview" data-target="p-21">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/sepatu/SneakersWanita.jpg" alt="">
+                        <h3>Sneakers Wanita </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.250.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+                    <div class="preview" data-target="p-22">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/sepatu/SepatuFutsal.webp" alt="">
+                        <h3>Sepatu Futsal</h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">rp.300.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+                    <div class="preview" data-target="p-23">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/sepatu/converse.jpg" alt="">
+                        <h3>Sepatu Converse </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.150.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+                    <div class="preview" data-target="p-24">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/sepatu/jordan.jpg" alt="">
+                        <h3>Sepatu Jordan </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.400.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+
+                    <div class="preview" data-target="p-25">
+                        <i class="fas fa-times"></i>
+                        <img src="assets/sepatu/sekolah.jpg" alt="">
+                        <h3>Sepatu sekolah </h3>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                           <span>( 250 )</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                        <div class="price">Rp.110.000</div>
+                        <div class="buttons">
+                           <a href="#" class="buy">Beli Sekarang</a>
+                           <a href="#" class="cart">Masukin keranjang <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>    
+                    </div>
+
+                </div>
+                <!--Footer-->
+     <footer class="footer" id="about">
+        <div class="footer-left">
+            <h3>Metode Pembayaran</h3>
+            <div class="credit-cards">
+                <img src="assets/payment/gopay-removebg-preview.png" alt="">
+                <img src="assets/payment/dana-removebg-preview.png" alt="">
+                <img src="assets/payment/shopeepay-removebg-preview.png" alt=""> 
+            </div>
+        <p class="footer-copyright">©️ 2024 pwpb kelompok-2</p>
+        </div>
+        
+        <div class="footer-center">
+            <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>Indonesia </span>Jawa Barat, Tasikmalaya</p>
+        </div>
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+62 81320207547</p>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="a">sintanurzazilla26@gmail.com</a></p>
+        </div>
+        </div>
+        
+        <div class="footer-right" id="about">
+            <p class="footer-about">
+                <span>About</span>
+                Di web Fashion Shop ini kita menjual berbagai jenis pakaian fashionable. Seperti Baju, Celana, Sepatu dll.
+                Kamu bisa membeli berbagai jenis pakaian dengan berbagai varian disini. Harga nya terjangkau, banyak discount,
+                gratis ongkir, pembayaran mudah juga. AYOO BELANJA SEKARANG !!
+            </p>
+        
+            <div class="footer-media">
+                <a href="a"><i class="fa fa-youtube"></i></a>
+                <a href="a"><i class="fa fa-facebook"></i></a>
+                <a href="a"><i class="fa fa-twitter"></i></a>
+                <a href="a"><i class="fa fa-instagram"></i></a>
+                <a href="a"><i class="fa fa-linkedin"></i></a>
+                
+            </div>
+        
+        </div>
+        </footer>
+
+    </div>
+
+   
+   
+<script src="script.js"></script>
+</body>
+</html>
