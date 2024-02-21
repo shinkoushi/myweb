@@ -648,7 +648,7 @@ background-color: #00b4d8;
     background: #444;
     color: #fff;
   }
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 800px) {
     .home {
       height: 100%;
     }
