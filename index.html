@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Shop</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/531c760f61.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <!--Bagian Navigasi-->
+        <nav>
+            <div class="logo">
+                <h3 class="nama">Fashion <span>Shop</span></h3>
+            </div>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Promo</a></li>
+                <li><a href="#">Payment</a></li>
+                <li><a href="#">Ekspedisi</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="search" name="" id="find" placeholder="cari apa hayo.." onkeyup="search()" />
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a> 
+        </nav>
+
+<!--Bagian Produk Promo-->
+        <div class="promo">
+        <h2>Produk Promo </h2>
+        <i class="fa-solid fa-fire"></i>
+    </div>
+    
+<!--Card Product Promo-->
+<div class="product-container">
+   
+    <button class="pre-btn"><img src="assets/simbol/arrow.png"></button>
+    <button class="nxt-btn"><img src="assets/simbol/arrow.png"></button>
+    <div class="product-all">
+    <div class="product" data-name="p-1">
+        <img src="assets/gambar baju.jpeg"/>
+        <div class="card-content">
+        <h3>Baju Wanita</h3>
+        <div class="harga">
+            <h5 class="fake">Rp.300.000</h5>
+            <h4 class="real">Rp.99.000</h4>
+        </div>
+        <div class="keranjang">
+            <a href="#">Promo 2.2<i class="fa-solid fa-tag"></i></a> 
+        </div>
+    </div>
+    </div>
+
+    <div class="product" data-name="p-2">
+        <img src="assets/celana cargo.jpeg"/>
+        <div class="card-content">
+        <h3>Celana Cargo</h3>
+        <div class="harga">
+            <h5 class="fake">Rp.250.000</h5>
+            <h4 class="real">Rp.69.000</h4>
+        </div>
+        <div class="keranjang">
+            <a href="#">Promo 2.2<i class="fa-solid fa-tag"></i></a> 
+        </div>
+    </div>
+    </div>
+
+
+    <div class="product" data-name="p-3">
+        <img src="assets/gambar sepatu anak laki-laki.jpeg"/>
+        <div class="card-content">
+        <h3>Sepatu Anak</h3>
+        <div class="harga">
+            <h5 class="fake">Rp.350.000</h5>
+            <h4 class="real">Rp.185.000</h4>
+        </div>
+        <div class="keranjang">
+            <a href="#">Promo 2.2<i class="fa-solid fa-tag"></i></a> 
+        </div>
+    </div>
+    </div>
+
+
+    <div class="product" data-name="p-4">
+        <img src="assets/gambar sweater.jpeg"/>
+        <div class="card-content">
+        <h3>Sweater Lucu</h3>
+        <div class="harga">
+            <h5 class="fake">Rp.200.000</h5>
+            <h4 class="real">Rp.75.000</h4>
+        </div>
+        <div class="keranjang">
+            <a href="#">Promo 2.2<i class="fa-solid fa-tag"></i></a> 
+        </div>
+    </div>
+    </div>
+
+
+    <div class="product" data-name="p-5">
+        <img src="assets/gambar cutbray.jpeg"/>
+        <div class="card-content">
+        <h3>Celana cutb</h3>
+        <div class="harga">
+            <h5 class="fake">Rp.290.000</h5>
+            <h4 class="real">Rp.115.000</h4>
+        </div>
+        <div class="keranjang">
+            <a href="#">Promo 2.2<i class="fa-solid fa-tag"></i></a> 
+        </div>
+    </div>
+    </div>
+
+    
+
+
+    
+   </div>
+</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
